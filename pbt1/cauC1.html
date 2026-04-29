@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+
+    <!-- style: Định dạng bảng -->
+    <style>   
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <!-- header: chứa phần đầu trang-->
+    <h1>Shop</h1>
+
+    <nav>
+        <!-- nav: menu điều hướng chính -->
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main> <!-- main: nội dung chính của trang -->
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <!-- nav: vì breadcrumb là điều hướng -->
+        <ol>
+            <!-- ol: danh sách có thứ tự -->
+            <li><a href="/">Trang chủ</a></li>
+            <li><a href="/">Điện thoại</a></li>
+            <li>iPhone 16</li>
+        </ol>
+    </nav>
+
+    <!-- Khu vực chi tiết sản phẩm -->
+    <section>
+        <!-- section: nhóm nội dung cùng chủ đề -->
+
+        <article>
+            <!-- article: sản phẩm là nội dung độc lập -->
+
+            <!-- Ảnh sản phẩm -->
+            <figure>
+                <!-- figure: chứa hình ảnh -->
+                <img src="https://suaranusantara.com/wp-content/uploads/2024/08/photo_2024-08-30-11.46.28.jpeg" alt="Ảnh chính sản phẩm" width="300">
+                <figcaption>Ảnh sản phẩm</figcaption>
+                <!-- figcaption: mô tả ảnh -->
+            </figure>
+
+            <!-- Danh sách ảnh phụ -->
+            <section>
+                <!-- section: nhóm các ảnh liên quan -->
+                <figure><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-pink?wid=2560&hei=1440&fmt=jpeg&qlt=95&.v=1723677131415" alt="16" width="150"></figure>
+                <figure><img src="https://thfvnext.bing.com/th/id/OIP.Q9eTVz0eiq6cUrXWdIDbuQHaHa?o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="16 Plus" width="150"></figure>
+                <figure><img src="https://masta.vn/wp-content/uploads/2024/09/iphone-16-pro-finish-select-202409-6-3inch-whitetitanium.webp" alt="16 Pro" width="150"></figure>
+                <figure><img src="https://dashboard.dienthoaivui.com.vn/uploads/wp-content/uploads/images/iphone-16-pro-max-256gb-da-kich-hoat-titan-tu-nhien-4.png" alt="16 Pro max" width="150"></figure>
+                <figure><img src="https://thfvnext.bing.com/th/id/OIP.Whg0dwZ9BF4Izc4EXtJOsQHaE7?w=282&h=188&c=7&r=0&o=7&cb=thfvnext&dpr=1.4&pid=1.7&rm=3" alt="16" width="150"></figure>
+            </section>
+
+            <!-- Thông tin sản phẩm -->
+            <header>
+                <!-- header trong article: phần tiêu đề sản phẩm -->
+                <h2>iPhone 16</h2>
+                <p>Giá: <strong>25.000.000</strong></p>
+                <p>★★★★★</p>
+            </header>
+
+            <section>
+                <!-- section: mô tả sản phẩm -->
+                <h3>Mô tả</h3>
+                <p>Màn hình 120Hz, Mỏng nhẹ</p>
+            </section>
+
+        </article>
+    </section>
+
+    <!-- Bảng thông số -->
+    <section>
+        <!-- section: nhóm thông số kỹ thuật -->
+        <h2>Thông số kỹ thuật</h2>
+
+        <table>
+            <!-- table: dữ liệu dạng bảng -->
+            <thead>
+                <!-- thead: tiêu đề bảng -->
+                <tr>
+                    <th>Thuộc tính</th>
+                    <th>Giá trị</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- tbody: dữ liệu chính -->
+                <tr>
+                    <td>Kích thước</td>
+                    <td>6.1 inch</td>
+                </tr>
+                <tr>
+                    <td>Chip</td>
+                    <td>A18</td>
+                </tr>
+                <tr>
+                    <td>Camera</td>
+                    <td>Dọc</td>
+                </tr>
+                <tr>
+                    <td>Bảo mật</td>
+                    <td>Face ID</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Đánh giá -->
+    <section>
+        <!-- section: khu vực đánh giá -->
+        <h2>Đánh giá</h2>
+
+        <article>
+            <!-- article: mỗi bình luận là nội dung độc lập -->
+            <p>Người dùng A</p>
+            <p>Nội dung bình luận...</p>
+        </article>
+
+    </section>
+
+</main>
+
+<aside>
+    <!-- aside: nội dung phụ (sidebar) -->
+
+    <section>
+        <!-- section: nhóm sản phẩm tương tự -->
+        <h2>Sản phẩm tương tự</h2>
+
+        <article>
+            <!-- article: mỗi sản phẩm là độc lập -->
+            <p>iPhone 17</p>
+            <p>iPhone 15</p>
+            <p>iPhone 14</p>
+        </article>
+
+    </section>
+</aside>
+
+<footer>
+    <!-- footer: phần cuối trang -->
+    <p>© 2026 Shop</p>
+</footer>
+
+</body>
+</html>
