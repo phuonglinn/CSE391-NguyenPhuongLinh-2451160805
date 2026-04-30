@@ -15,7 +15,7 @@
 
 - tab Network cho thấy thông tin của tất cả các HTTP request của trang
 
-![alt text](ScreenshotA1.png)
+![alt text](screenshots/ScreenshotA1.png)
 
 ### CÂU A2:
 <!--
@@ -109,23 +109,24 @@ Text C Text D           + <span><strong> : cùng dòng, text D kiểu chữ Bold
 ### CÂU B4: Dùng web thegioididong.com
 - Câu 1:
 
-    ![alt text](scrB4_1-1.jpg)
+    ![alt text](screenshots/scrB4_1.jpg)
 
 
-    ![alt text](scrB4_12-2.jpg)
+    ![alt text](screenshots/scrB4_12-2.jpg)
 
 
-    ![alt text](scrB4_13-1.jpg)
+    ![alt text](screenshots/scrB4_13-1.jpg)
 
 - Câu 2:
-
-    ![alt text](scrB4_2-1.png)
+    
+    ![alt text](screenshots/scrB4_2.png)
+    
     - Table này hiển thị thông tin nghành hàng và bảng giải thích thông số kỹ thuật
     - Có dùng `<thead> và <tbody>`
 
 - Câu 3:
 
-    ![alt text](scrB4-3-1.png)
+    ![alt text](screenshots/scrB4-3-1.png)
     - action: /tim-kiem
     - method: không ghi
     - Các input types được dùng: text, submit
