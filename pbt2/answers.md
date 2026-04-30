@@ -97,6 +97,8 @@ Không nên dùng aria-label khi đã có <label> vì aria-label sẽ ghi đè n
     </figure>
     ```
 ## PHẦN B: THỰC HÀNH
+### CÂU B1:
+- HTML không thể validate confirm password vì nó là ngôn ngữ đánh dấu dùng để cấu trúc giao diện, không có khả năng xử lí logic hay ghi nhớ giá trị để so sánh.
 
 ## PHẦN C: PHÂN TÍCH VÀ SUY LUẬN
 ### CÂU C1:
