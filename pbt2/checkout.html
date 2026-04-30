@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Đặt hàng</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Thanh toán đơn hàng</h1>
+
+    <label for="search">Tìm sản phẩm:</label>
+    <input list="products" id="search" name="search" placeholder="Nhập tên sản phẩm">
+    <datalist id="products">
+        <option value="Áo thun">
+        <option value="Quần jeans">
+        <option value="Giày sneaker">
+    </datalist>
+
+    <h2>Giỏ hàng</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Áo thun</td>
+                <td>200000</td>
+                <td>2</td>
+                <td>400000</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Quần jeans</td>
+                <td>500000</td>
+                <td>1</td>
+                <td>500000</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Giày sneaker</td>
+                <td>800000</td>
+                <td>1</td>
+                <td>800000</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4"><b>Tổng cộng</b></td>
+                <td><b>1700000</b></td>
+            </tr>
+        </tfoot>
+    </table><br>
+
+    <form action="#" method="POST">
+
+        <fieldset>
+            <legend>Thanh toán</legend>
+
+            <p>Phương thức thanh toán:</p>
+
+            <input type="radio" id="cod" name="payment" value="COD" required>
+            <label for="cod">COD</label>
+
+            <input type="radio" id="bank" name="payment" value="bank">
+            <label for="bank">Chuyển khoản</label>
+
+            <input type="radio" id="wallet" name="payment" value="wallet">
+            <label for="wallet">Ví điện tử</label>
+
+            <br><br>
+
+            <label for="coupon">Mã giảm giá</label>
+            <input type="text" id="coupon" name="coupon"
+                   placeholder="SALE2026"
+                   pattern="^SALE[0-9]{4}$">
+
+            <br><br>
+
+            <label for="note">Ghi chú</label>
+            <textarea id="note" name="note"
+                      placeholder="Nhập ghi chú (nếu có)"></textarea>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Thông tin giao hàng</legend>
+
+            <label for="delivery_date">Ngày giao hàng</label>
+            <input type="date" id="delivery_date" name="delivery_date"
+                   min="2026-05-01"
+                   required>
+
+            <br><br>
+
+            <label for="time">Khung giờ</label>
+            <select id="time" name="time" required>
+                <option value="">--Chọn--</option>
+                <option>Sáng (8-12h)</option>
+                <option>Chiều (14-18h)</option>
+                <option>Tối (18-21h)</option>
+            </select><br>
+
+            <label for="days">Thời gian giao hàng (số ngày)</label>
+
+            <input type="range" id="days" name="days"
+                min="1" max="7" step="1"
+                value="1"
+                oninput="dayOutput.value = days.value">
+
+            <output id="dayOutput">1</output> ngày
+
+        </fieldset><br>
+
+        <button type="submit" aria-label="Xác nhận đặt hàng">Đặt hàng</button>
+    </form>
+
+</body>
+</html>
