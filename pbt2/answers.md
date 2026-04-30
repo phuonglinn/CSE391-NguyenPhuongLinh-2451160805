@@ -100,4 +100,62 @@ Không nên dùng aria-label khi đã có <label> vì aria-label sẽ ghi đè n
 
 ## PHẦN C: PHÂN TÍCH VÀ SUY LUẬN
 ### CÂU C1:
+```
+- Lỗi 1: Dòng Tên — Input "Tên" không có , vi phạm accessibility
+- Sửa: 
+<label for="name">Tên:</label> 
+<input type="text" id="name" name="name" required>
 
+- Lỗi 2: Dòng email - Email chưa có <label for="...">, vi phạm accessibility
+- Sửa: 
+<label for="email">Email:</label> 
+<input type="email" id="email" name="email" placeholder="Email của bạn" required>
+
+- Lỗi 3: Dòng mật khẩu - password chưa có <label for="...">, vi phạm accessibility
+- Sửa: 
+<label for="password">Mật khẩu:</label> 
+<input type="password" id="password" name="password" required>
+
+- Lỗi 4: Dòng nhập lại mật khẩu - chưa có <label for="...">, vi phạm accessibility
+- Sửa: 
+<label for="confirmPassword">Nhập lại mật khẩu:</label> 
+<input type="password" id="confirmPassword" name="confirmPassword" required>
+
+- Lỗi 5: Dòng phone - Thếu <label for="..."> và sử dụng type="text" thay vì type="tel", vi phạm accessibility và không tối ưu giao diện bàn phím trên mobile
+- Sửa: 
+<label for="phone">Phone:</label> 
+<input type="tel" id="phone" name="phone" value="0901234567" required>
+
+- Lỗi 6: Dòng select - <select> không có <label>, vi phạm accessibility
+- Sửa:
+    <label for="city">Thành phố:</label>
+    <select id="city" name="city" required>
+        <option value="hn">Hà Nội</option>
+        <option value="hcm">TP.HCM</option>
+    </select>
+
+- Lỗi 7: Tích vào đồng ý điều khoản không dùng input checkbox 
+- Sửa: <label> <input type="checkbox" name="agree" required>Tôi đồng ý điều khoản </label>
+
+- Lỗi 8: submit không có button, thiếu aria-label
+- Sửa: <button type="submit" aria-label="Gửi form">Gửi</button>
+
+```
+
+### CÂU C2:
+1.
+- pattern cho CCCD: pattern="^[0-9]{12}$"
+- pattern cho số tài khoản: pattern="^[0-9]{10,15}$"
+2.
+- HTML5 validation không đủ an toàn cho ngân hàng. Vì:
+    - Chỉ nhằm mục đích nâng cao trải nghiệm người dùng
+    - Người dùng có thể tắ validation, sửa code bằng DevTools hoặc gửi request trực tiếp mà không thông qua các ràng buộc của giao diện
+3.
+- 3 loại validation mà HTML5 KHÔNG THỂ làm được:
+    - So sánh giữa các trường
+    - Kiểm tra dữ liệu từ sever
+    - Xử lí logic phức tạp
+4.
+- 2 rủi ro bảo mật nếu chỉ validate trên Frontend mà không validate Backend:
+    - Tấn công bảo mật
+    - Sai lệch logic
