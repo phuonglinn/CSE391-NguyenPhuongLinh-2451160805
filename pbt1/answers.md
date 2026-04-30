@@ -15,7 +15,7 @@
 
 - tab Network cho thấy thông tin của tất cả các HTTP request của trang
 
-![alt text](screenshots/ScreenshotA1.png)
+![alt text](screenshots/screenshotA1.png)
 
 ### CÂU A2:
 <!--
