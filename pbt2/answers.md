@@ -14,19 +14,19 @@
 
 ### CÂU A2:
 - Trường hợp 1: Không submit được. Vì thuộc tính required bắt buộc nhập phải có giá trị, khi người dùng để trống sẽ thông báo lỗi alt
-![alt text](<A2-TH1.png>)
+![alt text](<screenshots/A2-TH1.png>)
 
 - Trường hợp 2: Không submit được. Vì type="email" sẽ kiểm tra định dạng email có @ hay không, khi người dùng nhập "abc"  thì sẽ thông báo lỗi
-![alt text](<A2-TH2.png>)
+![alt text](<screenshots/A2-TH2.png>)
 
 - Trường hợp 3: Không submit được. Vì có thuộc tính min="1" và max="10", khi người dùng nhập 15 thì nó vượt qua khoảng này sẽ thông báo lỗi
-![alt text](<A2-TH3.png>)
+![alt text](<screenshots/A2-TH3.png>)
 
 - Trường hợp 4: Không submit được. Vì thuộc tính pattern="[0-9]{10}" yêu cầu đúng 10 chữ số, khi nhập "abc123" chứa chữ cái và không đủ 10 kí tự thì sẽ báo lỗi
-![alt text](<A2-TH4.png>)
+![alt text](<screenshots/A2-TH4.png>)
 
 - Trường hợp 5: Không submit được. Vì minlength="8" nghĩa là phải nhập tối thiểu 8 kí tự, khi người dùng nhập "123" nghĩa là chưa đủ độ dài tối thiểu nên thông báo lỗi
-![alt text](<A2-TH5.png>)
+![alt text](<screenshots/A2-TH5.png>)
 
 ### CÂU A3:
 ```
