@@ -1,0 +1,118 @@
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Element selector */
+body {
+    font-family: Arial, sans-serif;  /* Đổi font toàn bộ trang */
+    background-color: #f4f6f9;  
+    color: #333;
+    line-height: 1.6;   /* tăng khoảng cách giữa các chữ */
+    margin: 0;  /* xóa khoảng cách mặc định của trình duyệt */
+}
+
+/* Element selector */
+header {
+    background: linear-gradient(to right, #4a90e2, #6a5acd); /* nền chuyển màu */
+    color: white;
+    padding: 20px;     /* tạo khoảng cách trong header */
+}
+
+/* Descendant selector */
+header h1 {
+    margin-bottom: 10px; /* tạo khoảng cách dưới tiêu đề */
+}
+
+/* Descendant selector */
+nav ul {
+    list-style: none;   /* xóa dấu chấm đầu dòng của ul */
+    padding: 0;     /* xóa khoảng cách mặc định */
+}
+
+/* Descendant selector */
+nav ul li {
+    display: inline-block;  /* menu nằm ngang */
+    margin-right: 15px; /* tạo khoảng cách giữa các menu */
+}
+
+/* Descendant selector */
+nav a {
+    text-decoration: none;  /* xóa gạch chân mặc định */
+    color: #f0f0f0;     /* đổi màu link */
+    font-weight: bold;
+}
+
+/* Pseudo-class selector */
+nav a:hover {           /* kíchd hoạt chuột đưa vào */
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* Class selector */
+.active {       /* chọn phàn tử có class active */
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;       /* tạo đg gạch dưới */
+}
+
+/* ID selector */
+#about {
+    padding: 20px;  
+}
+
+/* Element selector */
+section {
+    padding: 20px;
+}
+
+/* Descendant selector */
+figure img {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;      /* gộp thành 1 dg viền duy nhất */
+    margin-top: 15px;           /* tạo khoảng cách phía trên bảng */
+}
+
+/* Element selector */
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Element selector */
+th {
+    background-color: #333333;
+    color: white;
+}
+
+/* Pseudo-class selector */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Pseudo-class selector */
+tr:hover {
+    background-color: #d6eaff;
+}
+
+/* ID selector */
+#contact {
+    background-color: #eef3f8;
+    padding: 20px;
+}
+
+/* Element selector */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
