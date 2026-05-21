@@ -1,0 +1,186 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background-color: #222;
+
+    color: white;
+}
+
+/* LOGO */
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+/* MENU */
+
+.menu {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+}
+
+/* MENU LINKS */
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+
+.menu a:hover {
+
+    color: yellow;
+
+    text-decoration: underline;
+}
+
+/* AUTH BUTTONS */
+
+.auth {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+/* BUTTONS */
+
+.auth button {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+
+.products {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    width: 1200px;
+
+    margin: 40px auto;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    flex: 0 0 calc(25% - 20px);
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+/* CARD IMAGE */
+
+.card img {
+
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+/* TITLE */
+
+.card h3 {
+
+    margin-top: 15px;
+}
+
+/* PRICE */
+
+.card p {
+
+    margin-top: 10px;
+
+    font-weight: bold;
+}
+
+/* BUY BUTTON */
+
+.card button {
+
+    margin-top: auto;
+
+    padding: 12px;
+
+    border: none;
+
+    background-color: black;
+
+    color: white;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+/* HOVER EFFECT */
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
