@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 960px;
+    margin: 30px auto;
+    border: 3px solid red;
+    overflow: hidden;
+}
+
+/* =========================
+   CÁCH 1 — BORDER BOX
+========================= */
+
+.fix1 .sidebar,
+.fix1 .content {
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.fix1 .sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: lightblue;
+}
+
+.fix1 .content {
+    width: 660px;
+    padding: 30px;
+    background-color: lightyellow;
+}
+
+/* =========================
+   CÁCH 2 — CONTENT BOX
+========================= */
+
+.fix2 .sidebar,
+.fix2 .content {
+    float: left;
+    border: 1px solid #ccc;
+}
+
+.fix2 .sidebar {
+    width: 258px;
+    padding: 20px;
+    background-color: lightgreen;
+}
+
+.fix2 .content {
+    width: 598px;
+    padding: 30px;
+    background-color: lightpink;
+}
