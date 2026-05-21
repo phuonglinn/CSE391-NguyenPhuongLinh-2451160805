@@ -73,4 +73,19 @@
     ```
 
 ## PHẦN B: THỰC HÀNH
-### CÂU B1:
+## PHẦN C: SUY LUẬN
+### CÂU C1:
+
+
+1. Dùng flexbox vì navbar là layout 1 chiều theo hàng ngang, flexbox rất hợp để căn trái/phải, canh giữa, spacing giữa các item
+
+2. Dùng grid vì đây là layout 2 chiều (hàng + cột). Grid giúp chia cột đều nhau rất dễ bằng `grid-template-columns`
+
+3. Kết hợp cả 2 vì thường dùng Grid để chia bố cục lớn (content + sidebar), bên trong từng phần dùng flexbox để căn chỉnh các item nhỏ.
+
+4. Dùng grid vì footer dạng nhiều cột đều nhau nên Grid gọn và rõ ràng hơn.
+
+5. Dùng flexbox vì card là layout dọc 1 chiều
+
+### CÂU C2:
+
