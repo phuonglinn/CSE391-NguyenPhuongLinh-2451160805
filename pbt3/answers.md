@@ -144,3 +144,104 @@ Câu hỏi thêm: Thứ tự ưu tiên: Inline CSS > Internal CSS > External CSS
 
 3. Nếu thêm `<p class="price" id="main-price" style="color: orange;">` thì element sẽ có màu cam.
 4. Nếu Rule A thêm !important, element có màu đen. Vì khi một thuộc tính được gán !important, nó sẽ phá vỡ mọi quy tắc tính điểm specificity thông thường và chiếm quyền ưu tiên cao nhất (cao hơn cả Inline style và ID selector).
+
+## PHẦN B: THỰC HÀNH CODE
+### CÂU B1:
+ - Các loại selector được dùng;
+    - Element selector: body, header, table
+    - Class selector: .active
+    - ID selector: #about, #contact	
+    - Descendant selector: nav a,header h1
+    - Pseudo-class selector: a:hover, tr:nth-child(even)
+
+### CÂU B2:
+PHẦN 1:
+
+- Hộp 1 (content-box): chiều rộng thực tế = 350 px (đo từ DevTools)
+
+![alt text](screenshots/B2-contentbox.png)
+- Hộp 2 (border-box): chiều rộng thực tế = 300 px (đo từ DevTools)
+
+![alt text](screenshots/B2-borderbox.png)
+
+- Giải thích sự khác biệt: 
+    - `box-sizing: content-box` làm padding và border cộng thêm vào kích thước thật của phần tử
+    - `box-sizing: border-box` thu hẹp phần content bên trong nên kích thước vẫn được giữ nguyên
+
+PHẦN 2:
+
+![alt text](screenshots/B2-contentbox.png)
+
+![alt text](screenshots/B2-borderbox.png)
+
+### CÂU B3:
+
+10 rules + specificity score
+1. p → (0,0,1)
+2. .highlight → (0,1,0)
+3. .text → (0,1,0)
+4. p.text → (0,1,1)
+5. p.highlight → (0,1,1)
+6. .text.highlight → (0,2,0)
+7. p.text.highlight → (0,2,1)
+8. #demo → (1,0,0)
+9. p#demo → (1,0,1)
+10. p#demo.text.highlight → (1,2,1)
+
+Element cuối cùng hiển thị màu gold, vì rule: p#demo.text.highlight có specificity cao nhất: (1,2,1) Nó mạnh hơn tất cả các rule còn lại.
+
+![alt text](screenshots/B3.png)
+
+Thay đổi thứ tự rules có ảnh hưởng không?
+- Nếu specificity khác nhau:
+→ thứ tự KHÔNG quan trọng.
+
+- Rule có specificity cao hơn vẫn thắng.
+
+- Nếu specificity bằng nhau:
+→ rule viết SAU sẽ thắng.
+
+## PHẦN C: DEBUG VÀ SUY LUẬN
+
+### CÂU C1:
+
+1.
+
+- Chiều rộng thực tế của sidebar = 342px
+- Chiều rộng thực tế của content = 722px
+
+2. Layout bị vỡ là do tổng chiểu rộng của 2 khối là 1064 > container bằng 960px, `content` không còn đủ chỗ trống nên trình duyệt tự động đẩy nó xuống dòng mới
+
+3. 2 cách sửa:
+
+- Cách 1: dùng border-box
+  - sidebar: width 300px gồm padding và border
+  - content: width 660px gồm padding và border
+
+- Cách 2: Tính toán lại width
+  - sidebar width mới: $300 - (20 \times 2) - (1 \times 2) =$ 258px
+  - content width mới: $660 - (30 \times 2) - (1 \times 2) =$ 598px
+    -> tổng = 960px
+
+### CÂU C2:
+
+1. Sản phẩm A có
+
+- `font-size` = 20px. Mặc dù nằm trong `.container` (14px), nhưng h2 có class `.title` nằm trong `.card`. `.card .title` trỏ trực tiếp và có độ ưu tiên cao hơn giá trị kế thừa từ cha.
+- `color` = green. Vì có từ khóa `!important`, quy tắc `.highlight` sẽ chiến thắng mọi cấp độ Specificity khác
+
+2. "Mô tả sản phẩm" (p trong card featured) có `color` = blue.
+
+- Thẻ `p` này có quy tắc `.card p { color: inherit; }`. Thuộc tính `inherit` bắt buộc phần tử phải lấy giá trị màu từ phần tử cha trực tiếp của nó là `.card`.
+
+3. "Sản phẩm B" (h2) có
+
+- `font-size` = 20px. Quy tắc `.card .title` thiết lập kích thước chữ 20px cho mọi phần tử `.title` nằm bên trong `.card`.
+- `color` = blue. Rule `#featured .title` không còn hiệu lực vì thẻ này nằm ngoài id `featured`. Chỉ còn rule `.card .title`
+
+4. "Mô tả sản phẩm B" (p.highlight) có `color` = green. Dù nó là thẻ `p` đang có rule `inherit` từ `.card` màu xanh, nhưng sự xuất hiện của class `.highlight` đi kèm `!important `đã phá vỡ mọi quy tắc kế thừa và gán màu xanh lá cây cho nó.
+
+
+
+
+
