@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ===== FIX LỖI 2 ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: lightblue;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+
+/* ===== FIX LỖI 3 ===== */
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+
+    flex-shrink: 0;
+
+    background: lightgray;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+
+/* ===== FIX LỖI 1 ===== */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: stretch;
+}
+
+.card {
+    width: 30%;
+    margin: 1.5%;
+    border: 1px solid #ccc;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.card p {
+    flex: 1;
+}
+
+.card .btn {
+    padding: 10px;
+    border: none;
+    background: blue;
+    color: white;
+    cursor: pointer;
+
+    margin-top: auto;
+}
