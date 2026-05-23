@@ -1,0 +1,305 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+
+/* =========================
+   MOBILE FIRST
+   (<768px)
+========================= */
+
+/* HEADER */
+
+.header {
+    background: #222;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Hamburger hiện trên mobile */
+
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Menu ẩn trên mobile */
+
+.nav {
+    display: none;
+}
+
+
+/* SIDEBAR ẨN */
+
+.sidebar {
+    display: none;
+}
+
+/* ADS ẨN */
+
+.ads {
+    display: none;
+}
+
+
+/* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+
+    /* Mobile = 1 cột */
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+
+/* PRODUCT CARD */
+
+.card {
+    background: white;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    padding-bottom: 15px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+
+    /* Ảnh responsive */
+
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0 15px 15px;
+}
+
+.card button {
+    margin-left: 15px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    background: blue;
+    color: white;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================
+   TABLET
+   (>=768px)
+========================= */
+
+@media (min-width: 768px) {
+
+    /* HEADER */
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        background: white;
+
+        padding: 20px;
+
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    .sidebar h2 {
+        font-size: 22px;
+    }
+
+    .sidebar select {
+        padding: 10px;
+    }
+
+
+    /* GRID = 2 CỘT */
+
+    .product-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 20px;
+    }
+
+
+    /* FONT RESPONSIVE */
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================
+   DESKTOP
+   (>=1024px)
+========================= */
+
+@media (min-width: 1024px) {
+
+    /* LAYOUT 3 CỘT */
+
+    .container {
+
+        display: grid;
+
+        grid-template-columns:
+            220px
+            1fr
+            200px;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+
+        display: block;
+
+        margin: 0;
+
+        height: fit-content;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+    }
+
+    .sidebar select {
+        width: 100%;
+    }
+
+
+    /* ADS BAR */
+
+    .ads {
+
+        display: block;
+
+        background: white;
+
+        padding: 20px;
+
+        border-radius: 10px;
+
+        height: fit-content;
+    }
+
+
+    /* PRODUCT GRID = 4 CỘT */
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        padding: 0;
+    }
+
+
+    /* FONT LỚN HƠN */
+
+    .card h3 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+
+}
