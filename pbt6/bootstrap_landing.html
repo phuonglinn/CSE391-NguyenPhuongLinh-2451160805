@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">🛒 MyShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Khuyến mãi</a></li>
+                </ul>
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm...">
+                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <a href="#" class="btn btn-primary position-relative">
+                    <i class="bi bi-cart"></i> Giỏ hàng
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://n7media.coolmate.me/image/August2025/ao-thun-viet-nam-tuoi-dep-phien-ban-cap-doi.jpg" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Bộ Sưu Tập Mùa Hè</h2>
+                    <p>Giảm giá lên đến 50% cho các mặt hàng mới.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://laforce.vn/wp-content/uploads/2022/08/giay-sneaker-la-gi-1.jpg" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Thời Trang Nam Nữ</h2>
+                    <p>Phong cách hiện đại, tự tin khoe cá tính.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://cf.shopee.vn/file/6001fed47904ab9479021b024d0c1776" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Phụ Kiện Chính Hãng</h2>
+                    <p>Cam kết chất lượng 100%.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Sản Phẩm Nổi Bật</h2>
+        <div class="row g-4">
+            
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.9hkBxZb4Le8L0i1yuAFZkgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3/300x300" class="card-img-top" alt="Product">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Áo Thun Cổ Tròn</h5>
+                        <p class="card-text text-muted">Áo thun cotton 100% thoáng mát, thấm hút mồ hôi.</p>
+                        <h6 class="text-danger fw-bold mb-3">250.000đ</h6>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary w-100 mb-2">Thêm vào giỏ</button>
+                            <button class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.bOyuovduz8My0ZZshIwNbwHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3/300x300" class="card-img-top" alt="Product">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Quần Jeans Nam</h5>
+                        <p class="card-text text-muted">Quần jeans phom chuẩn, chất liệu co giãn tốt.</p>
+                        <h6 class="text-danger fw-bold mb-3">450.000đ</h6>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary w-100 mb-2">Thêm vào giỏ</button>
+                            <button class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale 20%</span>
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.Y99bk383Rgl0qIJUBjhnWwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3/300x300" class="card-img-top" alt="Product">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Giày Sneaker Nữ</h5>
+                        <p class="card-text text-muted">Thiết kế trẻ trung, phù hợp đi dạo phố, thể thao.</p>
+                        <h6 class="text-danger fw-bold mb-3">550.000đ</h6>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary w-100 mb-2">Thêm vào giỏ</button>
+                            <button class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 position-relative shadow-sm">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.EvVzCAIkBt4VfJK0bRquSAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3/300x300" class="card-img-top" alt="Product">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Balo Thời Trang</h5>
+                        <p class="card-text text-muted">Balo đa năng, chống nước, có ngăn đựng laptop.</p>
+                        <h6 class="text-danger fw-bold mb-3">350.000đ</h6>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary w-100 mb-2">Thêm vào giỏ</button>
+                            <button class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Chi tiết sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/400x400" class="img-fluid rounded" alt="Chi tiết">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Tên Sản Phẩm Demo</h4>
+                            <h3 class="text-danger">Giá: Liên hệ</h3>
+                            <p class="mt-3">Mô tả chi tiết của sản phẩm sẽ được hiển thị tại đây. Người dùng có thể đọc thông số, chất liệu và chọn kích cỡ, màu sắc.</p>
+                            <button class="btn btn-primary mt-3"><i class="bi bi-cart-plus"></i> Thêm vào giỏ hàng ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5>Về MyShop</h5>
+                    <p class="text-secondary">Chúng tôi cung cấp các sản phẩm thời trang chất lượng cao với giá cả hợp lý nhất.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Trang chủ</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Sản phẩm</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Khuyến mãi</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5>Hỗ trợ khách hàng</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Chính sách đổi trả</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Hướng dẫn mua hàng</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <h5>Đăng ký nhận tin</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email của bạn">
+                        <button class="btn btn-primary" type="button">Gửi</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center border-top border-secondary pt-3 mt-3">
+                <p class="mb-0 text-secondary">&copy; 2026 MyShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
