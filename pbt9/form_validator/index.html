@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS Form Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Đăng Ký Tài Khoản</h2>
+        <form id="registerForm">
+            
+            <div class="form-group">
+                <label for="name">Họ và Tên</label>
+                <div class="input-wrapper">
+                    <input type="text" id="name" placeholder="Nhập họ và tên (2-50 ký tự)">
+                    <span class="status-icon" id="nameIcon"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-wrapper">
+                    <input type="text" id="email" placeholder="example@domain.com">
+                </div>
+                <div class="error-msg" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <div class="input-wrapper">
+                    <input type="text" id="phone" placeholder="XXXX-XXX-XXX">
+                </div>
+                <div class="error-msg" id="phoneError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="strength-meter">
+                    <div class="strength-bar" id="strengthBar"></div>
+                </div>
+                <div class="strength-text" id="strengthText"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Xác nhận mật khẩu</label>
+                <div class="input-wrapper">
+                    <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+                </div>
+                <div class="error-msg" id="confirmError"></div>
+            </div>
+
+            <button type="submit" id="submitBtn" disabled>Đăng ký</button>
+        </form>
+    </div>
+
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <h3>🎉 Đăng ký thành công!</h3>
+            <p>Cảm ơn <strong id="modalName"></strong> đã đăng ký.</p>
+            <div class="modal-info">
+                <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                <p><strong>SĐT:</strong> <span id="modalPhone"></span></p>
+            </div>
+            <button id="closeModalBtn">Đóng</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
