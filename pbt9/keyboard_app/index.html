@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcuts & Accessibility App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="shortcuts-guide">
+        <p>⌨️ <strong>Phím tắt:</strong> Mũi tên <code>←</code> <code>→</code>: Đổi ảnh | <code>1-9</code>: Nhảy đến ảnh | <code>Space</code>: Play/Pause Slideshow | <kbd>Ctrl</kbd> + <kbd>K</kbd>: Mở Command Palette | <code>Esc</code>: Đóng bộ lọc/modal</p>
+    </header>
+
+    <main class="container">
+        <section class="gallery-section" aria-label="Bộ sưu tập ảnh tương tác">
+            <div class="gallery-viewer" id="galleryViewer">
+                <span class="slideshow-badge" id="slideshowBadge" aria-live="polite">Slideshow: OFF</span>
+                <img id="mainImage" src="" alt="Hình ảnh hiển thị chính" />
+                <h2 id="imageTitle">Tiêu đề ảnh</h2>
+            </div>
+
+            <div class="gallery-controls">
+                <button id="prevBtn" aria-label="Ảnh trước đó">◀ Trước</button>
+                <div class="indicators" id="indicatorsContainer" role="tablist" aria-label="Danh sách ảnh"></div>
+                <button id="nextBtn" aria-label="Ảnh tiếp theo">Sau ▶</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="palette-overlay" id="paletteOverlay" role="dialog" aria-modal="true" aria-label="Hộp lệnh nhanh" aria-expanded="false">
+        <div class="palette-box">
+            <div class="palette-header">
+                <input type="text" id="paletteInput" placeholder="Nhập từ khóa tìm lệnh... (ví dụ: 'ảnh', 'play')" aria-label="Tìm kiếm câu lệnh nhanh" autocomplete="off">
+            </div>
+            <ul class="palette-list" id="paletteList" role="listbox" aria-label="Danh sách câu lệnh tìm được">
+                </ul>
+            <div class="palette-footer">
+                <span>Di chuyển bằng phím <code>↑</code> <code>↓</code> | Chọn bằng <code>Enter</code> | Thoát bằng <code>Esc</code></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
