@@ -1,0 +1,81 @@
+:root {
+    --bs-primary: #198754;
+    --bs-primary-rgb: 25, 135, 84;
+
+    --bs-success: #20c997;
+    --bs-success-rgb: 32, 201, 151;
+
+    --bs-body-bg: #f4f0e8;
+    --bs-body-color: #2d3436;
+
+    --bs-border-radius: 1rem;
+    --bs-border-radius-lg: 1.5rem;
+    --bs-border-radius-xl: 2rem;
+}
+
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+.display-1,
+.display-5 {
+    letter-spacing: -2px;
+}
+
+.card {
+    transition: 0.3s;
+    border-radius: var(--bs-border-radius-xl);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.sidebar-box {
+    border-radius: var(--bs-border-radius-lg);
+}
+
+.form-control {
+    border-radius: 14px;
+}
+
+
+
+.section-spacing {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.blog-card {
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+}
+
+.tags-cloud .badge {
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+.btn-outline-success {
+    color: var(--bs-success);
+    border-color: var(--bs-success);
+}
+.btn-success{
+    background-color: #20c997;
+    border-color: #20c997;
+}
+
+.btn-success:hover, .btn-outline-success:hover {
+    background-color: #17b589;
+    border-color: #17b589;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+}
